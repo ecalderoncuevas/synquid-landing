@@ -1,21 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider"; // <-- Importamos tu nuevo proveedor
+import { Rowdies, Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const rowdies = Rowdies({
+  weight: ["300", "400", "700"],
+  variable: "--font-rowdies",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Synquid | Control de Asistencia", // <-- Título profesional para la pestaña
-  description: "La plataforma definitiva para la gestión de asistencias y horarios.",
+  title: "Synquid | Control de Asistencia Escolar",
+  description:
+    "La app móvil de gestión de asistencia que conecta alumnos y profesores en tiempo real. Disponible para Android.",
 };
 
 export default function RootLayout({
@@ -24,22 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="es" // <-- Cambiado a español
-      suppressHydrationWarning // <-- MUY IMPORTANTE para que next-themes funcione sin errores
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        {/* Envolvemos el contenido con el ThemeProvider */}
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
-      </body>
+    <html lang="es" className={`${rowdies.variable} ${inter.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

@@ -1,101 +1,28 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-rowdies);
 
-/* =========================================
-   ☀️ TEMA CLARO (LIGHT MODE)
-========================================= */
-:root {
-  --background: hsl(30 27% 96%);
-  --foreground: hsl(149 18% 27%);
-  --card: hsl(149 18% 27%);
-  --card-foreground: hsl(30 27% 96%);
-  --primary: hsl(149 18% 27%);
-  --primary-foreground: hsl(30 27% 96%);
-  --popover: hsl(30 27% 96%);
-  --popover-foreground: hsl(149 18% 27%);
-  --secondary: hsl(149 18% 27% / 0.1);
-  --secondary-foreground: hsl(149 18% 27%);
-  --muted: hsl(149 18% 27% / 0.1);
-  --muted-foreground: hsl(149 18% 27% / 0.6);
-  --border: hsl(149 18% 27% / 0.2);
-  --input: hsl(149 18% 27% / 0.2);
-  --ring: hsl(149 18% 27%);
-  --radius: 0.5rem;
-}
-
-.dark {
-  --background: hsl(0 0% 13%);
-  --foreground: hsl(125 21% 80%);
-  --card: hsl(125 21% 80%);
-  --card-foreground: hsl(0 0% 13%);
-  --primary: hsl(125 21% 80%);
-  --primary-foreground: hsl(0 0% 13%);
-  --popover: hsl(0 0% 13%);
-  --popover-foreground: hsl(125 21% 80%);
-  --secondary: hsl(125 21% 80% / 0.1);
-  --secondary-foreground: hsl(125 21% 80%);
-  --muted: hsl(125 21% 80% / 0.1);
-  --muted-foreground: hsl(125 21% 80% / 0.6);
-  --border: hsl(125 21% 80% / 0.2);
-  --input: hsl(125 21% 80% / 0.2);
-  --ring: hsl(125 21% 80%);
-}
-
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: hsl(0 0% 13%);
-    --foreground: hsl(125 21% 80%);
-    --card: hsl(125 21% 80%);
-    --card-foreground: hsl(0 0% 13%);
-    --primary: hsl(125 21% 80%);
-    --primary-foreground: hsl(0 0% 13%);
-    --popover: hsl(0 0% 13%);
-    --popover-foreground: hsl(125 21% 80%);
-    --secondary: hsl(125 21% 80% / 0.1);
-    --secondary-foreground: hsl(125 21% 80%);
-    --muted: hsl(125 21% 80% / 0.1);
-    --muted-foreground: hsl(125 21% 80% / 0.6);
-    --border: hsl(125 21% 80% / 0.2);
-    --input: hsl(125 21% 80% / 0.2);
-    --ring: hsl(125 21% 80%);
-  }
-}
-
-/* Mapeo de variables para Tailwind v4 */
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --color-cream: #F5F5EE;
+  --color-dark-green: #1B3A2D;
+  --color-medium-green: #4CAF7D;
+  --color-darker-green: #0F2219;
+  --color-tag-green: #A8D5A2;
+  --color-tag-yellow: #F5D86E;
+  --color-tag-red: #E87070;
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  html {
+    scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: #F5F5EE;
+    color: #1B3A2D;
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+  * {
+    box-sizing: border-box;
   }
 }
