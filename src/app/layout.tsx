@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Rowdies, Inter } from "next/font/google";
 import "./globals.css";
+import { ParticlesBackground } from "@/components/ParticlesBackground";
 
 const rowdies = Rowdies({
   weight: ["300", "400", "700"],
@@ -28,7 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${rowdies.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <ParticlesBackground />
+        {children}
+      </body>
     </html>
   );
 }

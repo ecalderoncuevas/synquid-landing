@@ -2,7 +2,7 @@ import { GitBranch, Globe } from "lucide-react";
 
 export default function FooterSection() {
   return (
-    <footer className="py-16 px-6" style={{ backgroundColor: "#0F2219" }}>
+    <footer className="py-16 px-6" style={{ backgroundColor: "rgba(9,18,12,0.88)", backdropFilter: "blur(8px)" }}>
       <div className="max-w-6xl mx-auto">
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
@@ -31,7 +31,9 @@ export default function FooterSection() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="https://synquid.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm transition-colors hover:text-white"
                   style={{ color: "rgba(255,255,255,0.45)" }}
                 >
@@ -45,7 +47,7 @@ export default function FooterSection() {
                   className="text-sm transition-colors hover:text-white"
                   style={{ color: "rgba(255,255,255,0.45)" }}
                 >
-                  Descargar APK
+                  Descargar App
                 </a>
               </li>
               <li>
